@@ -1,4 +1,4 @@
-format.addEventListener("submit", () =>{
+form.addEventListener("submit", () =>{
     const register = {
         email: email.value,
         password: password.value
@@ -11,7 +11,7 @@ format.addEventListener("submit", () =>{
         }
     }).then(res => res.json())
     .then(data => {
-        if(data.status == "error"){
+        if(data.status === "error"){
             success.style.display = "none"
             error.style.display = "block"
             error.innerText = data.error
