@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const loggedin = require("../controllers/loggedin");
+const logout = require("../controllers/logout");
 
 router.get("/", loggedin, (req, res) =>{
     if(req.user){
@@ -19,5 +20,7 @@ router.get("/register", (req, res) =>{
 router.get("/login", (req, res) =>{
     res.sendFile("login.html", {root:"./public/"});
 })
+
+router.get("/logout", logout); // no posting required
 
 module.exports = router;
