@@ -1,6 +1,5 @@
 const db = require("../routes/dbconfig");
 const bcrypt = require("bcryptjs");
-
 const register = async (req, res) => {
     //wait for bcrypt
     const { email, password:Npassword } = req.body
