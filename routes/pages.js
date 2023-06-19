@@ -1,8 +1,14 @@
 const express = require("express");
 const router = express.Router();
+const loggedin = require("../controllers/loggedin");
 
-router.get("/", (req, res) =>{
-    res.render("index");
+router.get("/", loggedin, (req, res) =>{
+    if(req.user){
+        res.render("index", {status:"logged in", user:req.user});
+    }
+    else{
+        res.render("index", {status:"not logged in", user:"foo"})
+    }
 })
 
 router.get("/register", (req, res) =>{
