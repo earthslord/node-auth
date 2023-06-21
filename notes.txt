@@ -1,5 +1,0 @@
-installed nodemon 2.0.7, express, ejs, dotenv, jsonwebtoken(cookies), mysql, bcryptjs(hashing pw)
-cookieparser
-controllers - login logout loggedin loggedout
-routes - user routing
-views - ejs
